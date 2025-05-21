@@ -1,7 +1,7 @@
-geopandas--1.0.1
-rasterio--1.4.3
-folium--0.18.0
-plotly--6.0.1
+geopandas
+rasterio
+folium
+plotly
 plotly.express
-streamlit--1.45.0
+streamlit
 streamlit_folium

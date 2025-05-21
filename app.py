@@ -21,7 +21,7 @@ st.set_page_config(
 def load_geodataframe(nome_tabela):
     
     #Caminho do Banco de Dados Geoespaciais
-    bd_geopackage = 'D:/Geotec/MBA/09_Geovisualizacao_Dashboards_e_WebMap/Aula_1/bd_campos_novos.gpkg'
+    bd_geopackage = './bd_campos_novos.gpkg'
 
     #Criando a SQL
     sql = f"SELECT * FROM {nome_tabela}"
@@ -67,7 +67,7 @@ coords_centrais = ai_campos_novos.geometry.centroid.union_all().centroid.xy
 longitude, latitude = coords_centrais[0][0], coords_centrais[1][0]
 
 #Adicionar camada raster
-with rio.open('D:\\Geotec\\MBA\\09_Geovisualizacao_Dashboards_e_WebMap\\Aula_2\\lulc.tif') as src: #caminho da imagem
+with rio.open('./lulc.tif') as src: #caminho da imagem
    #salvando a imagem como um numpy - matriz de valores
    img = src.read()
    #Obter as coordenadas do retângulo envolvente [variavel.propriedades que vou salvar nas novas variaveis]
